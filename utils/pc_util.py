@@ -381,9 +381,7 @@ def write_bbox(scene_bbox, out_filename):
         scene.add_geometry(convert_box_to_trimesh_fmt(box))        
     
     mesh_list = trimesh.util.concatenate(scene.dump())
-    # save to ply file    
-    #trimesh.io.export.export_mesh(mesh_list, out_filename, file_type='ply')
-	mesh_list.export(out_filename)
+    mesh_list.export(out_filename)
     
     return
 
